@@ -20,3 +20,4 @@ else
 fi
 exit 0
 ```
+tests require CppUnit: `sudo apt-get install libcppunit-dev`
