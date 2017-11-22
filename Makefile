@@ -16,7 +16,7 @@ OBJ_TEST = $(BUILD_DIR)/$(notdir $(SRC_TEST:.cpp=.o))
 
 all: $(PROG_NAME) | $(BUILD_DIR)
 
-compiletest: | $(BIN_DIR)
+tests: | $(BIN_DIR)
 	$(CC) $(SRC_TEST) -o $(BIN_DIR)/test -lcppunit
 
 compile:
