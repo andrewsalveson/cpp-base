@@ -11,12 +11,18 @@ OBJ_LIST = $(BUILD_DIR)/$(notdir $(SRC_LIST:.cpp=.o))
 
 .PHONY: all clean $(PROG_NAME) compile
 
-all: $(PROG_NAME)
+all: $(PROG_NAME) | $(BUILD_DIR)
 
-compile: 
-	    $(CC) -c $(CFLAG) $(SRC_LIST) -o $(OBJ_LIST)
+compile:
+			$(CC) -c $(CFLAG) $(SRC_LIST) -o $(OBJ_LIST)
 
-$(PROG_NAME): compile
+$(BUILD_DIR):
+			mkdir -p $(BUILD_DIR)
+
+$(BIN_DIR):
+			mkdir -p $(BIN_DIR)
+
+$(PROG_NAME): compile | $(BIN_DIR)
 	    $(LD) $(OBJ_LIST) -o $(BIN_DIR)/$@
 
 clean:
