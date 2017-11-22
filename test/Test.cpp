@@ -21,9 +21,9 @@
 
 #include "../src/Speaker.h"
 
-class MainTestCase : public CppUnit::TestCase
+class SpeakerTestCase : public CppUnit::TestCase
 {
-  CPPUNIT_TEST_SUITE(MainTestCase);
+  CPPUNIT_TEST_SUITE(SpeakerTestCase);
     CPPUNIT_TEST(speakTest);
   CPPUNIT_TEST_SUITE_END();
   
@@ -39,23 +39,23 @@ class MainTestCase : public CppUnit::TestCase
 
 };
 
-void MainTestCase::speakTest()
+void SpeakerTestCase::speakTest()
 {
   CPPUNIT_ASSERT(HOWDY == fixture->speak());
 }
 
-void MainTestCase::setUp()
+void SpeakerTestCase::setUp()
 {
   fixture = new Speaker();
 }
 
-void MainTestCase::tearDown()
+void SpeakerTestCase::tearDown()
 {
   delete fixture;
   fixture = NULL;
 }
 
-CPPUNIT_TEST_SUITE_REGISTRATION( MainTestCase );
+CPPUNIT_TEST_SUITE_REGISTRATION( SpeakerTestCase );
 
 int main()
 {
