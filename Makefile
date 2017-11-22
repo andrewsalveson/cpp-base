@@ -1,7 +1,7 @@
 CC          = g++
 LD          = g++ 
 CFLAG       = -Wall
-PROG_NAME   = prog
+PROG_NAME   = howdy 
 
 SRC_DIR     = ./src
 BUILD_DIR   = ./build
