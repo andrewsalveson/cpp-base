@@ -1,0 +1,11 @@
+#!/bin/sh
+# clean build directory
+PATTERN="./build/*.o"
+if [ ls $PATTERN 2>/dev/null ]; then
+  echo "cleaning build directory";
+  # rm $PATTERN
+else
+  echo "build directory clean"
+fi
+echo "make and run tests"
+make tests && ./bin/test
