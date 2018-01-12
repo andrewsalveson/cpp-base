@@ -17,7 +17,7 @@
 #include <cppunit/BriefTestProgressListener.h>
 #include <cppunit/CompilerOutputter.h>
 
-#define HOWDY  "Hello, world."
+#define HOWDY  "Howdy, world."
 
 #include "../src/Speaker.h"
 
