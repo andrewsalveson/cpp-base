@@ -10,7 +10,7 @@ recommend running tests before commit using pre-push git hook:
 
 ```
 #!/bin/sh
-make tests && ./bin/test
+./run-tests
 results=$?
 if [ $results -eq 1 ]; then
   echo -e "${red}\n Tests FAILED\n\n commit aborted${reset}"
