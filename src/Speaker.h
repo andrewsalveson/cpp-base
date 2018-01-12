@@ -6,13 +6,16 @@
 class Speaker
 {
   public:
+    static std::string GREETING;
     std::string speak();
 
 };
 
 
+std::string Speaker::GREETING = "Howdy";
+
 std::string Speaker::speak()
 {
-  return "Howdy, world.";
+  return Speaker::GREETING + ", world.";
 }
 #endif
